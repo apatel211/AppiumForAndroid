@@ -14,8 +14,12 @@ public class googleDriverPage extends BasePage {
 
     private final By backUpName = AppiumBy.xpath("//android.widget.TextView[@text='Backup name']");
     private final By editName = AppiumBy.xpath("//android.widget.EditText");
-
     private final By clickContinue = AppiumBy.xpath("//android.widget.TextView[@text='Continue']");
+
+    private final By enterEmail = AppiumBy.xpath("//android.widget.TextView[@text='Continue']");
+
+    private final By clickNext = AppiumBy.xpath("//android.widget.TextView[@text='Continue']");
+
 
     public googleDriverPage(final AndroidDriver driver) {
 
@@ -29,6 +33,17 @@ public class googleDriverPage extends BasePage {
         helper.tap(driver, continueElement);
         logger.info("Set back up name successfully");
         return backUpElement;
+    }
 
+    public void enterEmailAndPassword(final AndroidDriver driver) {
+
+        BasePage.switchToWebContext(driver);
+
+        wait.until(visibilityOfElementLocated(this.enterEmail)).sendKeys("Temp");
+        final WebElement nextElement = wait.until(visibilityOfElementLocated(this.clickNext));
+        helper.tap(driver, nextElement);
+        logger.info("Set email id successfully");
+
+        BasePage.switchToNativeContext(driver);
     }
 }
