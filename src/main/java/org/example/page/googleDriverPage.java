@@ -15,9 +15,7 @@ public class googleDriverPage extends BasePage {
     private final By backUpName = AppiumBy.xpath("//android.widget.TextView[@text='Backup name']");
     private final By editName = AppiumBy.xpath("//android.widget.EditText");
     private final By clickContinue = AppiumBy.xpath("//android.widget.TextView[@text='Continue']");
-
     private final By enterEmail = AppiumBy.xpath("//android.widget.TextView[@text='Continue']");
-
     private final By clickNext = AppiumBy.xpath("//android.widget.TextView[@text='Continue']");
 
 

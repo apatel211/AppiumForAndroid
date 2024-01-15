@@ -40,8 +40,7 @@ public class setAndGetSecurityCodePage extends BasePage {
         logger.info("Get security code successfully ");
         return securityPageText;
     }
-
-
+    
     public boolean setSecurityCode(final AndroidDriver driver) {
         final boolean clickConfirmText = wait.until(visibilityOfElementLocated(this.clickConfirm)).isEnabled();
         final WebElement clickConfirm = wait.until(visibilityOfElementLocated(this.clickConfirm));

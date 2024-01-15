@@ -33,16 +33,14 @@ public class helper {
     private static Point getCenterOfElement(Point location, Dimension size) {
         return new Point(location.getX() + size.getWidth() / 2, location.getY() + size.getHeight() / 2);
     }
-    
+
     public static String extractText(String input) {
         Pattern pattern = Pattern.compile("\\.\\s*(\\D+)");
         Matcher matcher = pattern.matcher(input);
 
-        // Check if a match is found
         if (matcher.find()) {
             return matcher.group(1).trim();
         } else {
-            // Return an empty string or handle it as needed
             return "";
         }
     }

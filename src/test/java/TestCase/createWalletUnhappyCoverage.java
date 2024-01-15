@@ -51,19 +51,7 @@ public class createWalletUnhappyCoverage extends BasePage {
 
         final googleDriverPage googleDriver = new googleDriverPage(driver);
         Assert.assertTrue(googleDriver.backUpName(driver));
-
-//        final setAndGetSecurityCodePage setAndGetSecurityCode = new setAndGetSecurityCodePage(driver);
-//        Assert.assertTrue(setAndGetSecurityCode.getSecurityCode(driver));
-//        Assert.assertTrue(setAndGetSecurityCode.setSecurityCode(driver));
-//
-//        final setPasscodePage setPasscode = new setPasscodePage(driver);
-//        Assert.assertTrue(setPasscode.enterPassword(driver));
-//        Assert.assertTrue(setPasscode.enterCorrectConfirmPassword(driver));
-//
-//        final homePage home = new homePage(driver);
-//        Assert.assertTrue(home.enterWelcomePage(driver));
-//        Assert.assertTrue(home.enterHomePage());
-
+        
         logger.info("Happy Test - Create Wallet unsuccessfully completed");
     }
 }

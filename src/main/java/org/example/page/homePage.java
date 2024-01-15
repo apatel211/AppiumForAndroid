@@ -30,7 +30,6 @@ public class homePage extends BasePage {
         return enterWelcomePageElement;
     }
 
-
     public boolean enterHomePage() {
         final boolean homePageElement = wait.until(visibilityOfElementLocated(this.homePage)).isEnabled();
         logger.info("Clicked on home Page  successfully ");
